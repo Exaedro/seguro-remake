@@ -29,5 +29,29 @@
             </div>
         </section>
     </main>
+    <?php
+    $conexion = mysqli_connect("localhost", "root", "", "auto");
+    if(!(isset($_POST['nombre']) or isset($_POST['apellido']) or isset($_POST['contra']) or isset($_POST['correo']) or isset($_POST['telefono']))) return;
+
+    $nombre = $_POST['nombre'];
+    $apellido = $_POST['apellido'];
+    $contra = $_POST['contra'];
+    $telefono = $_POST['telefono'];
+    $correo = $_POST['correo'];
+        
+    $query = "SELECT * FROM clientes WHERE correo_electronico = '$correo'";
+    $resultado = mysqli_query($conexion, $query);
+    
+    if(mysqli_num_rows($resultado) >= 1) {
+        echo '<script type="text/javascript">alert("Ya existe una cuenta con este nombre de usuario.")</script>';
+    } else {
+        $query = "INSERT INTO clientes (nombre, apellido, telefono, correo_electronico, contraseña) VALUES ('$nombre', '$apellido', '$telefono', '$correo', '$contra')";
+        mysqli_query($conexion, $query);
+        
+        echo '<script type="text/javascript">alert("Registrado correctamente, inicia sesion.")</script>';
+        header("Location: iniciar_sesion.php");
+    }
+
+    ?>
 </body>
 </html>

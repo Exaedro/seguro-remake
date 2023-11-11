@@ -23,5 +23,33 @@
             </div>
         </section>
     </main>
+    <?php
+    session_start();
+    $conexion = mysqli_connect("localhost", "root", "", "auto");
+    if(!(isset($_POST['correo']) or isset($_POST['contra']))) return;
+
+    $correo = $_POST['correo'];
+    $contra = $_POST['contra'];
+        
+    $query = "SELECT * FROM clientes WHERE correo_electronico = '$correo' AND contraseña = '$contra'";
+    $resultado = mysqli_query($conexion, $query);
+    
+    if(mysqli_num_rows($resultado) == 1) {
+        $fila = mysqli_fetch_row($resultado);
+
+        if(isset($_SESSION['usuario'])) {
+            unset($_SESSION['usuario']);
+        }
+        
+        $_SESSION['usuario'] = $fila[0];
+        $_SESSION['rol'] = $fila[6];
+
+        header("Location: index.php");
+    } else {
+        echo '<script type="text/javascript">alert("No se encontro tu cuenta.")</script>';
+    }
+    
+    
+    ?>
 </body>
 </html>

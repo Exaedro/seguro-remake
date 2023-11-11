@@ -10,12 +10,27 @@
     <header>
         <nav class="wrapper">
             <ul class="nav-header">
-                <li><a href="index.html#inicio">Inicio</a></li>
-                <li><a href="index.html#planes">Planes</a></li>
-                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="index.php#inicio">Inicio</a></li>
+                <?php 
+                    session_start();
+                    if(isset($_SESSION['rol'])) {
+                        if($_SESSION['rol'] == 'admin') {
+                            echo '<li><a href="vehiculos.php">Vehiculos</a></li>';
+                        }
+                    }
+                ?>
+                <li><a href="index.php#planes">Planes</a></li>
+                <li><a href="index.php#contacto">Contacto</a></li>
             </ul>
             <div class="nav-body">
-                <a href="iniciar_sesion.html">Iniciar Sesion</a>
+            <?php
+                    if(isset($_SESSION['usuario'])) {
+                        echo '<a href="perfil.php" style="margin-left: 20px">Perfil</a>';
+                        echo '<a href="php/cerrar_sesion.php">Cerrar Sesion</a>';
+                    } else {
+                        echo '<a href="iniciar_sesion.php">Iniciar Sesion</a>';
+                    }
+                ?>
             </div>
         </nav>
     </header>
@@ -56,12 +71,14 @@
     </div>
     <section id="ingresar-vehiculo" class="ingresar-vehiculo">
         <h2>Ingresa tu vehiculo</h2>
-        <form action="">
-            <input type="text" name="tipo" placeholder="Tipo de vehiculo">
-            <input type="text" name="marca" placeholder="Marca">
-            <input type="text" name="modelo" placeholder="Modelo">
-            <button type="submit" class="boton">Añadir Vehiculo</button>
-        </form>
+        <?php 
+            if(!isset($_SESSION['usuario'])) {
+                echo '<h2>Inicia sesion para añadir tu vehiculo.</h2>';
+                echo '<a href="iniciar_sesion.php" class="btn2" style="position: relative;left: 389px;width: 380px;">Iniciar Sesion</a>';
+                return;
+            };
+            include 'formulario.php';
+        ?>       
     </section>
     <footer id="contacto">
         <div class="wrapper">
