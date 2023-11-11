@@ -10,7 +10,7 @@
     <main>
         <section class="formulario">
             <h2>Registro</h2>
-            <form action="">
+            <form method="post">
                 <label for="nombre">Nombre</label>
                 <input type="text" name="nombre" placeholder="Pedro">
                 <label for="apellido">Apellido</label>

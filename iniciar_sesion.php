@@ -10,7 +10,7 @@
     <main>
         <section class="formulario">
             <h2>Iniciar Sesion</h2>
-            <form action="">
+            <form method="post">
                 <label for="correo">Correo Electronico</label>
                 <input type="text" name="correo" placeholder="ejemplo@gmail.com">
                 <label for="correo">Contraseña</label>
