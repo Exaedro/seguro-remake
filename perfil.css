@@ -1,0 +1,28 @@
+@import url('globals.css');
+
+.perfil {
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+    gap: 30px;
+}
+
+.autos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    gap: 15px;
+}
+
+.auto {
+    border: 2px solid #3766ff;
+    border-radius: 7px;
+    padding: 15px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.auto h3 {
+    margin: 10px 0;
+}

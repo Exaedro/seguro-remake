@@ -1,0 +1,67 @@
+@import url('globals.css');
+
+main {
+    height: 96vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--sc-texto);
+    font-family: system-ui;
+    padding: 15px;
+}
+
+.formulario .botones {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.formulario .botones a { 
+    color: var(--sc-texto);
+}
+
+.formulario {
+    width: 600px;
+    background: linear-gradient(135deg, #09f, rgb(0, 208, 255));
+    border-radius: 10px;
+}
+
+.formulario h2 {
+    text-align: center;
+    padding: 25px 0;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario input {
+    outline: none;
+    height: 50px;
+    margin: 10px 20px 35px 20px;
+    font-size: 18px;
+    padding: 0 15px;
+    border-radius: 5px;
+}
+
+.formulario button {
+    margin: 0px 20px 20px 20px;
+    color: var(--sc-texto);
+    background-color: var(--color);
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.formulario button:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+
+.formulario label {
+    font-weight: 700;
+    margin-left: 20px;
+    font-size: 16px;
+}
