@@ -18,7 +18,7 @@
                 <?php
                 session_start();
                     if(isset($_SESSION['usuario'])) {
-                        echo '<a href="perfil.php">Perfil</a></div>';
+                        echo '<a href="perfil.php">Perfil</a>';
                         echo '<a href="php/cerrar_sesion.php">Cerrar Sesion</a>';
                     } else {
                         echo '<a href="iniciar_sesion.php">Iniciar Sesion</a>';
