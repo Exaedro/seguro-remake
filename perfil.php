@@ -10,9 +10,9 @@
     <header>
         <nav class="wrapper">
             <ul class="nav-header">
-                <li><a href="index.html#inicio">Inicio</a></li>
-                <li><a href="index.html#planes">Planes</a></li>
-                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="index.php#inicio">Inicio</a></li>
+                <li><a href="index.php#planes">Planes</a></li>
+                <li><a href="index.php#contacto">Contacto</a></li>
             </ul>
             <div class="nav-body">
                 <?php
