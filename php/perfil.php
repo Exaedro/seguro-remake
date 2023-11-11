@@ -1,7 +1,7 @@
 <?php
     if(!isset($_SESSION['usuario'])) return header('Location: ../iniciar_sesion.php');
     
-    $db = mysqli_connect('localhost', 'root', '', 'auto');
+    $db = mysqli_connect('localhost', 'phpmyadmin', 'phpmyadmin', 'auto');
     
     $query = "SELECT c.nombre, c.apellido, c.correo_electronico, c.telefono, COUNT(v.modelo) as cantidad FROM clientes c JOIN vehiculos v ON c.DNI_cliente == v.DNI_cliente WHERE c.DNI_cliente = ". $_SESSION['usuario'] .";";
     $result = mysqli_query($db, $query);

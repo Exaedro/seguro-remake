@@ -4,7 +4,7 @@
         exit();
     }
     
-    $db = mysqli_connect('localhost', 'root', '', 'auto');
+    $db = mysqli_connect('localhost', 'phpmyadmin', 'phpmyadmin', 'auto');
     
     $query = "SELECT v.tipo_vehiculo, v.modelo, v.marca, c.apellido FROM vehiculos v JOIN clientes c ON v.DNI_cliente = c.DNI_cliente WHERE v.DNI_cliente = ". $_SESSION['usuario'] .";";
     $result = mysqli_query($db, $query);

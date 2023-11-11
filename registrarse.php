@@ -24,13 +24,13 @@
                 <button type="submit" class="boton">Acceder</button>
             </form>
             <div class="botones">
-                <a href="index.html">Cerrar</a>
-                <a href="iniciar_sesion.html">¿Ya tenes una cuenta?</a>
+                <a href="index.php">Cerrar</a>
+                <a href="iniciar_sesion.php">¿Ya tenes una cuenta?</a>
             </div>
         </section>
     </main>
     <?php
-    $conexion = mysqli_connect("localhost", "root", "", "auto");
+    $conexion = mysqli_connect("localhost", "phpmyadmin", "phpmyadmin", "auto");
     if(!(isset($_POST['nombre']) or isset($_POST['apellido']) or isset($_POST['contra']) or isset($_POST['correo']) or isset($_POST['telefono']))) return;
 
     $nombre = $_POST['nombre'];

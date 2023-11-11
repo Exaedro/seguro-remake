@@ -7,7 +7,7 @@
     $correo_electronico = $_POST['correo_electronico'];
     $contraseña = $_POST['contraseña'];
 
-    $db = mysqli_connect('localhost', 'root', '', 'auto');
+    $db = mysqli_connect('localhost', 'phpmyadmin', 'phpmyadmin', 'auto');
     $query = "INSERT INTO clientes (nombre, apellido, telefono, correo_electronico, contraseña) VALUES ('$nombre', '$apellido', '$telefono', '$correo_electronico', '$contraseña');";
     mysqli_query($db, $query);
 ?>
