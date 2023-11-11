@@ -1,0 +1,224 @@
+@import url('globals.css');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color: #09f;
+    --hover-color: #1270f3;
+    --texto: #000;
+    --sc-texto: #fff;
+    --fondo: #ededed;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--sc-texto);
+    text-decoration: none;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+.fondo {
+    background-color: var(--fondo);
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    color: var(--texto);
+}
+
+header {
+    background-color: var(--color);
+}
+
+main h2 {
+    font-size: 1.7rem;
+}
+
+main {
+    font-size: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px; 
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+nav .nav-header {
+    list-style-type: none;
+    display: flex;
+}
+
+nav a {
+    padding: 10px 15px;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: var(--hover-color);
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+.inicio {
+    padding: 150px 0;
+    text-align: center;
+}
+
+.inicio h1 {
+    margin-bottom: 15px;
+}
+
+.inicio p {
+    margin-bottom: 8px;
+}
+
+.inicio .boton-grande {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    font-weight: 700;
+    background-color: var(--color);
+    width: 450px;
+    max-width: 100%;
+    height: 150px;
+    font-size: 30px;
+    transition: background 0.3s ease;
+}
+
+.inicio .boton-grande:hover {
+    background-color: var(--hover-color);
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+.planes {
+    text-align: center;
+}
+
+.planes .container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.planes h2 {
+    margin-bottom: 30px;
+}
+
+.plan {
+    width: 0px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    border: 2px solid var(--color);
+    color: var(--color);
+    border-radius: 7px;
+    padding: 10px 0;
+    transition: border 0.3s ease, background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.plan p {
+    margin: 12px 0;
+}
+
+.plan:hover {
+    border: 2px solid var(--hover-color);
+    background-color: var(--hover-color);
+    color: var(--sc-texto);
+    transform: scale(1.050);
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+.beneficios {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.beneficios h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.beneficios article {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 7px;
+    border: 2px solid var(--color);
+    color: var(--color);
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+.ingresar-vehiculo {
+    padding: 150px 0;
+    margin: 0 auto;
+    width: 600px;
+    max-width: 100%;
+}
+
+.ingresar-vehiculo h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.ingresar-vehiculo input {
+    margin-bottom: 15px;
+    outline: none;
+    border-bottom: 2px solid var(--color);
+    padding: 10px 15px;
+    font-size: 18px;
+}
+
+.ingresar-vehiculo form {
+    display: flex;
+    flex-direction: column;
+}
+
+.boton {
+    background-color: var(--color);
+    color: var(--sc-texto);
+    padding: 15px;
+    border-radius: 7px;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.boton:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+footer {
+    color: var(--sc-texto);
+    background-color: var(--color);
+    font-weight: 700;
+}
+
+footer .wrapper {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
