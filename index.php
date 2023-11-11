@@ -75,9 +75,9 @@
             if(!isset($_SESSION['usuario'])) {
                 echo '<h2>Inicia sesion para añadir tu vehiculo.</h2>';
                 echo '<a href="iniciar_sesion.php">Iniciar Sesion</a>';
-                return;
-            };
-            include 'formulario.php';
+            } else {
+                include 'formulario.php';
+            }
         ?>       
     </section>
     <footer id="contacto">
