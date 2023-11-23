@@ -30,7 +30,7 @@
         </section>
     </main>
     <?php
-    $conexion = mysqli_connect("localhost", "phpmyadmin", "phpmyadmin", "auto");
+    $conexion = mysqli_connect("localhost", "root", "", "auto");
     if(!(isset($_POST['nombre']) or isset($_POST['apellido']) or isset($_POST['contra']) or isset($_POST['correo']) or isset($_POST['telefono']))) return;
 
     $nombre = $_POST['nombre'];

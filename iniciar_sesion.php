@@ -25,7 +25,7 @@
     </main>
     <?php
     session_start();
-    $conexion = mysqli_connect("localhost", "phpmyadmin", "phpmyadmin", "auto");
+    $conexion = mysqli_connect("localhost", "root", "", "auto");
     if(!(isset($_POST['correo']) or isset($_POST['contra']))) return;
 
     $correo = $_POST['correo'];
